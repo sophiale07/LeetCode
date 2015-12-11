@@ -27,6 +27,7 @@ public:
                        maxlen = j - i;
                        maxindex = i;
                    }
+				   
 				   break;
                }
             }
