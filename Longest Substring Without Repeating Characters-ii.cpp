@@ -7,13 +7,14 @@ public:
         int size=s.length();
         int maxlen=0;
         int maxindex=0;
+		int last_start=0;
         char visit[256];
 		int dp[100];
         memset(visit,-1,sizeof visit);
 		memset(dp,0,sizeof dp);
 		dp[0]=1;
 		visit[arr[0]]=0;
-		int last_start=0;
+		
         for(int i = 1; i < size; ++i)
         {
             if(visit[arr[i]]==-1)
