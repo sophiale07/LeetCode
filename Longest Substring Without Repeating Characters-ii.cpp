@@ -13,26 +13,26 @@ public:
         memset(visit,-1,sizeof visit);
 		memset(dp,0,sizeof dp);
 		dp[0]=1;
-		visit[arr[0]]=0;
+		visit[s[0]]=0;
 		
         for(int i = 1; i < size; ++i)
         {
-            if(visit[arr[i]]==-1)
+            if(visit[s[i]]==-1)
 			{
 				dp[i]=dp[i-1]+1;
-				visit[arr[i]]=i;   /* 记录字符下标 */
+				visit[s[i]]=i;   /* 记录字符下标 */
 			}
 			else
 			{  
-				if(last_start <= visit[arr[i]])
+				if(last_start <= visit[s[i]])
 				{
-					dp[i]=i - visit[arr[i]];
-					last_start=visit[arr[i]]+1;
-					visit[arr[i]]=i; /* 更新最近重复位置 */
+					dp[i]=i - visit[s[i]];
+					last_start=visit[s[i]]+1;
+					visit[s[i]]=i; /* 更新最近重复位置 */
 				}else
 				{
 					dp[i]=dp[i-1]+1;
-					visit[arr[i]]=i; /* 更新最近重复位置 */
+					visit[s[i]]=i; /* 更新最近重复位置 */
 				}
 			
 			}
