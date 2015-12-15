@@ -22,7 +22,7 @@ public:
             }
 
 			int val2=0;
-            if(l2!=NULL)
+			if(l2!=NULL)
             {
                 val2=l2->val;
                 l2=l2->next;
@@ -36,9 +36,9 @@ public:
         }
 
 		if(carry==1){
-			p->next=new ListNode(1);
+		p->next=new ListNode(1);
 		}
-        return l->next;
+		return l->next;
     }
 
 };
